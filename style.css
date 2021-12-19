@@ -1,6 +1,8 @@
 * {
   padding: 0px;
   margin: 0px;
+  word-break: break-all;
+  box-sizing: border-box;
 }
 
 body {
@@ -255,10 +257,12 @@ section {
   font-size: 40px;
   letter-spacing: 1px;
   width: 100%;
+  font-weight: 700;
+  line-height: 74px;
 }
 
 .About__title h2>span {
-  font-size: 50px;
+  font-size: 45px;
   font-family: 'Lato', sans-serif;
   font-weight: 900;
 }
@@ -268,6 +272,11 @@ section {
   font-weight: 700;
   line-height: 26px;
   margin-top: 15px;
+  display: inline-block;
+}
+
+.About__title br {
+  display: none;
 }
 
 .About__button {
@@ -478,8 +487,90 @@ main {
 .About__title h2 {
   font-size: 30px !important;
   text-align: center;
-
+}
+.About__title br {
+  display: block;
 }
 
 }
 
+@media screen and (max-width: 1024px) {
+.About {
+ flex-direction: column; 
+}
+
+.About__title {
+  width: 100%;
+}
+
+.About__button {
+  margin-top: 40px;
+}
+}
+
+@media screen and (max-width: 1080px) { 
+main {
+  padding-top: 60px;
+}
+.Header {
+  background-color: #fff;
+}
+
+.HeaderLogo {
+  transition: opacity 0.2s;
+}
+
+.HeaderLogo:hover {
+  opacity: 0.8;
+}
+
+.HeaderNavHamburger {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 21px;
+  z-index: 100;
+  margin-left: auto;
+}
+
+.HeaderNavHamburger__line:first-child {
+  top: 0;
+}
+
+.HeaderNavHamburger__line {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  transform: translate(0, -50%);
+  border-radius: 10px;
+  transition: top 0.2s, transform 0.2s, opacity 0.3s;
+}
+
+.HeaderNavHamburger__line:last-child {
+  top: 100%;
+}
+
+.HeaderNavList {
+  overflow-y: scroll;
+  position: fixed;
+  top: 60px;
+  left: 100%;
+  width: 100%;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 75px;
+  transition: transform 0.5s;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+
+}
+  
+
+  
